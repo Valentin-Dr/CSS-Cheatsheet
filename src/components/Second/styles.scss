@@ -1,0 +1,138 @@
+body {
+  overflow: hidden;
+}
+
+.wavy {
+  position: relative;
+  width: 100%;
+  height: 96vh;
+  & .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('/src/assets/wave.png');
+    background-size: 1000px 100px;
+  }
+  & .wave1 {
+    animation: waveOne 12s linear infinite;
+    z-index: 2;
+  }
+  & .wave2 {
+    animation: waveTwo 10s linear infinite;
+    opacity: 0.8;
+    z-index: 2;
+  }
+  & .wave3 {
+    animation: waveThree 20s linear infinite;
+    opacity: 0.4;
+    z-index: 2;
+  }
+  & .wave4 {
+    animation: waveFour 15s linear infinite;
+    opacity: 0.6;
+    z-index: 2;
+  }
+  & .wave5 {
+    animation: waveFive 5s linear infinite;
+    opacity: 0.2;
+    z-index: 2;
+  }
+}
+
+.cup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 180px;
+  border: 6px solid rgb(0, 0, 43);
+  border-top: 2px solid transparent;
+  border-radius: 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(https://image.ibb.co/fmHm66/wave.png);
+  background-position: 0px 350px;
+  background-repeat: repeat-x;
+  animation: filling 5s linear infinite;
+  box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+    &:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    border: 6px solid #fff;
+    right: -57px;
+    top: 30px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+}
+
+
+@keyframes filling {
+  0% {
+    background-position: 0 100px;
+  }
+  50% {
+    background-position: 1000px 50px;
+  }
+  70% {
+    background-position: 1500px 30px;
+  }
+  100% {
+    background-position: 2000px 100px;
+  }
+}
+
+@keyframes waveOne {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes waveTwo {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes waveThree {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -600px;
+  }
+}
+
+@keyframes waveFour {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -2000px;
+  }
+}
+
+@keyframes waveFive {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 3000px;
+  }
+}

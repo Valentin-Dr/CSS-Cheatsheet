@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Anton';
+  src: url('../../assets/Anton-Regular.ttf');
+}
+
+.neonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.neonInput {
+  font-family: 'Anton', cursive;
+  background: none;
+  border: none;
+  color: rgb(0, 12, 63);
+  font-size: 8rem;
+  width: 100%;
+  letter-spacing: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-box-reflect: below -11px linear-gradient(transparent, #0004);
+  animation: neonInput 5s linear infinite;
+  outline: none;
+  &::selection {
+    background: none;
+    border: 1px #e9cdff solid;
+  }
+}
+
+@keyframes neonInput {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+  {
+    color: rgb(0, 12, 63);
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+  {
+    color: white;
+    text-shadow:
+    0 0 10px #e9cdff,
+    0 0 40px #e9cdff,
+    0 0 80px #e9cdff,
+    0 0 160px #e9cdff
+    ;
+  }
+}
