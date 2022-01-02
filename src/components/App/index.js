@@ -4,6 +4,7 @@ import ChromeReq from 'src/components/ChromeReq';
 import First from 'src/components/First';
 import Second from 'src/components/Second';
 import Third from 'src/components/Third';
+import Glassmorphism from 'src/components/Glassmorphism';
 import { Routes, Route } from 'react-router-dom';
 import './styles.scss';
 
@@ -25,6 +26,10 @@ export default function App() {
         <Route
           path="/Neon_input"
           element={isChromium ? <Third /> : <ChromeReq />}
+        />
+        <Route
+          path="/Glassmorphism"
+          element={<Glassmorphism />}
         />
       </Routes>
       {/* <First /> */}
