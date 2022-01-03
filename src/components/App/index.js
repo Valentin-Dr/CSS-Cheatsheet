@@ -5,6 +5,7 @@ import First from 'src/components/First';
 import Second from 'src/components/Second';
 import Third from 'src/components/Third';
 import Glassmorphism from 'src/components/Glassmorphism';
+import NeumorphismRing from 'src/components/NeumorphismRing';
 import { Routes, Route } from 'react-router-dom';
 import './styles.scss';
 
@@ -34,6 +35,10 @@ export default function App() {
         <Route
           path="/Glassmorphism"
           element={isChromium ? <Glassmorphism /> : <ChromeReq />}
+        />
+        <Route
+          path="/Neumorphism-ring"
+          element={<NeumorphismRing />}
         />
       </Routes>
       {/* <First /> */}

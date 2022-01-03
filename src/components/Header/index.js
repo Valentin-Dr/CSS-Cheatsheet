@@ -37,6 +37,13 @@ export default function Header() {
         >
           <Button>Glassmorphism</Button>
         </NavLink>
+
+        <NavLink
+          key="/fifth"
+          to="/Neumorphism-ring"
+        >
+          <Button>Neumorphism Ring</Button>
+        </NavLink>
       </Button.Group>
     </header>
   );
