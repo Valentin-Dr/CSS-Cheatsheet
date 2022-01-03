@@ -5,6 +5,11 @@ export default function Glassmorphism() {
     <div
       className="glassContainer"
     >
+      <div className="square" />
+      <div className="square" />
+      <div className="square" />
+      <div className="square" />
+      <div className="square" />
       <div
         className="glassCard"
       >
