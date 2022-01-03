@@ -1,9 +1,12 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { randomizeFirstColor, randomizeSecondColor } from 'src/actions';
 
 import './styles.scss';
 
-export default function First() {
+export default function First({
+  chromium,
+}) {
   const dispatch = useDispatch();
 
   const onClick = () => {
@@ -23,8 +26,12 @@ export default function First() {
       <h2
         className="clickMe"
       >
-        Click me
+        { chromium ? 'Click me' : 'You need Chrome for it to work'}
       </h2>
     </header>
   );
 }
+
+First.propTypes = {
+  chromium: PropTypes.bool.isRequired,
+};

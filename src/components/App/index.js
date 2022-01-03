@@ -17,11 +17,15 @@ export default function App() {
       <Routes>
         <Route
           path="/"
-          element={<First />}
+          element={(
+            <First
+              chromium={isChromium}
+            />
+          )}
         />
         <Route
           path="/Wavy"
-          element={<Second />}
+          element={isChromium ? <Second /> : <ChromeReq />}
         />
         <Route
           path="/Neon_input"
@@ -29,7 +33,7 @@ export default function App() {
         />
         <Route
           path="/Glassmorphism"
-          element={<Glassmorphism />}
+          element={isChromium ? <Glassmorphism /> : <ChromeReq />}
         />
       </Routes>
       {/* <First /> */}
