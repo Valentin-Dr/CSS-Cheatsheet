@@ -1,6 +1,6 @@
 import './styles.scss';
 
-export default function Third() {
+export default function NeonInput() {
   return (
     <div
       className="neonContainer"

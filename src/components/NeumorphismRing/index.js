@@ -13,6 +13,9 @@ export default function NeumorphismRing() {
     <div
       className="neumorphismContainer"
     >
+    {/* <div className="neumorphismText">
+      Hell
+    </div> */}
       <div
         className="neumorphRing"
         onClick={onClick}

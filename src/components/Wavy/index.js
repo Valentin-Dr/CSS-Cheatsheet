@@ -1,9 +1,6 @@
-import { useDispatch } from 'react-redux';
-import { randomizeFirstColor, randomizeSecondColor } from 'src/actions';
-
 import './styles.scss';
 
-export default function First() {
+export default function Wavy() {
   // const dispatch = useDispatch();
 
   // const onClick = () => {

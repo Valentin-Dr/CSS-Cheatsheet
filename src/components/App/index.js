@@ -1,9 +1,9 @@
 // == Import
 import Header from 'src/components/Header';
 import ChromeReq from 'src/components/ChromeReq';
-import First from 'src/components/First';
-import Second from 'src/components/Second';
-import Third from 'src/components/Third';
+import AnimOutlines from 'src/components/AnimOutlines';
+import Wavy from 'src/components/Wavy';
+import NeonInput from 'src/components/NeonInput';
 import Glassmorphism from 'src/components/Glassmorphism';
 import NeumorphismRing from 'src/components/NeumorphismRing';
 import { Routes, Route } from 'react-router-dom';
@@ -19,18 +19,18 @@ export default function App() {
         <Route
           path="/"
           element={(
-            <First
+            <AnimOutlines
               chromium={isChromium}
             />
           )}
         />
         <Route
           path="/Wavy"
-          element={isChromium ? <Second /> : <ChromeReq />}
+          element={isChromium ? <Wavy /> : <ChromeReq />}
         />
         <Route
           path="/Neon_input"
-          element={isChromium ? <Third /> : <ChromeReq />}
+          element={isChromium ? <NeonInput /> : <ChromeReq />}
         />
         <Route
           path="/Glassmorphism"

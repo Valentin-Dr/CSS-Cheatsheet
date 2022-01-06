@@ -4,7 +4,7 @@ import { randomizeFirstColor, randomizeSecondColor } from 'src/actions';
 
 import './styles.scss';
 
-export default function First({
+export default function AnimOutlines({
   chromium,
 }) {
   const dispatch = useDispatch();
@@ -32,6 +32,6 @@ export default function First({
   );
 }
 
-First.propTypes = {
-  chromium: PropTypes.bool.isRequired,
+AnimOutlines.propTypes = {
+  chromium: PropTypes.object.isRequired,
 };

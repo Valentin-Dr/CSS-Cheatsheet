@@ -3,12 +3,30 @@
   --secondNeumColor: #ff00e0;
 }
 
-.neumorphismContainer {
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/Poppins-ExtraLight.ttf');
+}
+
+.neumorphism {
+  &Container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   // z-index: -1;
+  }
+  // &Text {
+  //   font-family: 'Poppins', cursive;
+  //   position: relative;
+  //   left: 1%;
+  //   text-shadow: 5px 5px 15px rgb(0, 2, 99);
+  //   font-size: 18rem;
+  //   color: #ccc;
+  //   opacity: 0;
+  //   transition: opacity 2s linear;
+  //   // display: none;
+  // }
 }
 
 .neumorphRing {

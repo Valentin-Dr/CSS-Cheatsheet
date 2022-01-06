@@ -1,3 +1,4 @@
+import Tilt from 'react-tilt';
 import './styles.scss';
 
 export default function Glassmorphism() {
@@ -10,6 +11,7 @@ export default function Glassmorphism() {
       <div className="square" />
       <div className="square" />
       <div className="square" />
+      <Tilt className="Tilt" options={{ scale: 1, max: 35, transition: false, speed: 0, reset: false }}>
       <div
         className="glassCard"
       >
@@ -32,6 +34,7 @@ export default function Glassmorphism() {
           </a>
         </div>
       </div>
+      </Tilt>
     </div>
   );
 }
