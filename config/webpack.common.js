@@ -77,6 +77,15 @@ module.exports = {
           filename: 'fonts/[hash][ext][query]'
         }
       },
+      // mp3
+      // Fonts and SVGs
+      {
+        test: /\.(mp3)$/,
+        type: 'asset',
+        generator: {
+          filename: 'piano/[hash][ext][query]'
+        }
+      },
     ],
   },
 };

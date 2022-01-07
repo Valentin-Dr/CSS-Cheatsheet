@@ -6,6 +6,7 @@ import Wavy from 'src/components/Wavy';
 import NeonInput from 'src/components/NeonInput';
 import Glassmorphism from 'src/components/Glassmorphism';
 import NeumorphismRing from 'src/components/NeumorphismRing';
+import ThreeDStairsPiano from 'src/components/3DStairsPiano';
 import { Routes, Route } from 'react-router-dom';
 import './styles.scss';
 
@@ -39,6 +40,10 @@ export default function App() {
         <Route
           path="/Neumorphism-ring"
           element={<NeumorphismRing />}
+        />
+        <Route
+          path="/3D-stairs-piano"
+          element={<ThreeDStairsPiano />}
         />
       </Routes>
       {/* <First /> */}

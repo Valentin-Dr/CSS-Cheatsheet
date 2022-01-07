@@ -14,21 +14,23 @@ export default function AnimOutlines({
     dispatch(randomizeSecondColor());
   };
   return (
-    <header
-      className="box"
-      onClick={onClick}
-    >
-      <h1
-        className="box-title"
+    <div className="animOutContainer">
+      <div
+        className="box"
+        onClick={onClick}
       >
-        CSS
-      </h1>
-      <h2
-        className="clickMe"
-      >
-        { chromium ? 'Click me' : 'You need Chrome for it to work'}
-      </h2>
-    </header>
+        <h1
+          className="box-title"
+        >
+          CSS
+        </h1>
+        <h2
+          className="clickMe"
+        >
+          { chromium ? 'Click me' : 'You need Chrome for it to work'}
+        </h2>
+      </div>
+    </div>
   );
 }
 

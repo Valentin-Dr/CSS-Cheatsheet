@@ -10,6 +10,12 @@
   --secondColor: #ff0f5f;
 }
 
+.animOutContainer {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(0, 0, 43);
+}
+
 .box {
   display: flex;
   align-items: center;

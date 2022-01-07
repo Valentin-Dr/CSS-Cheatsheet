@@ -44,6 +44,13 @@ export default function Header() {
         >
           <Button>Neumorphism Ring</Button>
         </NavLink>
+
+        <NavLink
+          key="/sixth"
+          to="/3D-stairs-piano"
+        >
+          <Button>3D Stairs Piano (WIP !)</Button>
+        </NavLink>
       </Button.Group>
     </header>
   );

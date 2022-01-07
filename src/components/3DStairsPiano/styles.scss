@@ -1,0 +1,98 @@
+.stairsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(#ccc, rgb(80, 80, 80));
+  overflow: hidden;
+}
+
+.stairs {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(160deg);
+  animation: turnStairs 10s linear infinite;
+  & .base {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    width: 360px;
+    height: 300px;
+    background: rgb(0, 0, 0);
+    transform: rotateX(90deg) translateZ(-150px) scale(2);
+    filter: blur(2px);
+    opacity: 1;
+  }
+  & .step {
+    position: absolute;
+    width: 60px;
+    bottom: -60px;
+    @for $i from 1 to 8 {
+      &:nth-child(#{$i}) {
+        height: calc(60px * #{$i});
+        left: calc(60px * #{$i});
+      }
+    }
+    // background: #f0f;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 300px;
+      background: #ccc;
+      transform: rotateX(90deg) translateZ(150px);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 60px;
+      background: #fff;
+      transform: rotateY(90deg) translateZ(-150px);
+    }
+    &:hover::before {
+      filter: brightness(1.1);
+      cursor: pointer;
+    }
+    & i {
+      transform-style: preserve-3d;
+      position: absolute;
+      display: block;
+      width: 62px;
+      height: 100%;
+      background: #fff;
+      &:nth-child(1) {
+        transform: translateZ(150px);
+      }
+      &:nth-child(2) {
+        transform: translateZ(-150px);
+      }
+    }
+    &:last-child i:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300px;
+      height: 100%;
+      background: #000;
+      transform: rotateY(90deg) translate3d(-150px,0,-90px);
+      background: rgb(233, 233, 233);
+    }
+  }
+}
+
+@keyframes turnStairs {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(360deg);
+  }
+}
