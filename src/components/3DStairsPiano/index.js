@@ -16,6 +16,7 @@ export default function ThreeDStairsPiano() {
 
   return (
     <div className="stairsContainer">
+    <div className="testThreeD">
       <div className="stairs">
         <div className="base" />
         <div className="step 0" onMouseEnter={onHover}>
@@ -42,6 +43,7 @@ export default function ThreeDStairsPiano() {
           <i />
           <i />
         </div>
+      </div>
       </div>
     </div>
   );

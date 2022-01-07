@@ -4,7 +4,13 @@
   align-items: center;
   min-height: 100vh;
   background: radial-gradient(#ccc, rgb(80, 80, 80));
+  transform-style: preserve-3d;
   overflow: hidden;
+}
+
+.testThreeD {
+  position: absolute;
+  transform-style: preserve-3d;
 }
 
 .stairs {
